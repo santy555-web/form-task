@@ -1,0 +1,97 @@
+.lblError{
+  color: red;
+}
+.container{
+  background-color: whitesmoke;
+  }
+  .centered {
+    text-align: center;
+  }
+  hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid whitesmoke;
+    margin: 1em 0;
+    padding: 0;
+  }
+  #section-topbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10000;
+    overflow: visible;
+    font: normal 16px/24px 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  }
+
+  #section-topbar a {
+    color: #fff;
+  }
+
+  #topbar-inner {
+    background: #111;
+    line-height: 0;
+    text-align: center;
+  }
+
+  /*
+  Top Bar
+
+  By default, top navigation bar uses "fixed" position
+  */
+
+  #section-topbar ul#nav {
+    display: inline-block;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    border-right: 1px solid #222;
+    /* For IE, the outcast */
+    zoom: 1;
+    *display: inline;
+  }
+
+  #section-topbar ul#nav>li {
+    display: block;
+    float: left;
+    padding: 0;
+  }
+
+  #section-topbar ul#nav a {
+    display: block;
+    font: normal 11px/18px "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-decoration: none;
+    padding: 18px 20px 18px 20px;
+    border-left: 1px solid #222;
+  }
+
+  #section-topbar ul#nav a:focus {
+    background: #111;
+    text-decoration: none;
+    border-left: 1px solid #111;
+  }
+
+  #section-topbar ul#nav a:hover {
+    background: #222;
+    text-decoration: none;
+    border-left: 1px solid #111;
+  }
+
+  #section-topbar ul#nav .active a {
+    background: #44bbaa;
+    border-left: 1px solid #111;
+  }
+
+  #section-topbar ul#nav .active a:hover {
+    background: #44bbaa;
+  }
+
+  #section-topbar i {
+    font-size: 25px;
+  }
+
+  /*---------------------------------------------------
+  SECTION WRAPS
+  ---------------------------------------------------*/
+

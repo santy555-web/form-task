@@ -1,0 +1,166 @@
+
+<style type="text/css">
+body {
+	color: #999;
+	background: #f5f5f5;
+	font-family: 'Roboto', sans-serif;
+}
+
+.form-control, .form-control:focus, .input-group-addon {
+	border-color: #e1e1e1;
+	border-radius: 0;
+}
+
+.login-form {
+	width: 390px;
+	margin: 0 auto;
+	padding: 30px 0;
+}
+
+.login-form h2 {
+	color: #636363;
+	margin: 0 0 15px;
+	text-align: center;
+}
+
+.login-form .lead {
+	font-size: 14px;
+	margin-bottom: 30px;
+	text-align: center;
+}
+
+.login-form form {
+	border-radius: 1px;
+	margin-bottom: 15px;
+	background: #fff;
+	border: 1px solid #f3f3f3;
+	box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+	padding: 30px;
+}
+
+.login-form .form-group {
+	margin-bottom: 20px;
+}
+
+.login-form label {
+	font-weight: normal;
+	font-size: 13px;
+}
+
+.login-form .form-control {
+	min-height: 38px;
+	box-shadow: none !important;
+	border-width: 0 0 1px 0;
+}
+
+.login-form .input-group-addon {
+	max-width: 42px;
+	text-align: center;
+	background: none;
+	border-width: 0 0 1px 0;
+	padding-left: 5px;
+}
+
+.login-form .btn {
+	font-size: 16px;
+	font-weight: bold;
+	background: #19aa8d;
+	border-radius: 3px;
+	border: none;
+	min-width: 140px;
+	outline: none !important;
+}
+
+.login-form .btn:hover, .signup-form .btn:focus {
+	background: #179b81;
+}
+
+.login-form a {
+	color: #19aa8d;
+	text-decoration: none;
+}
+
+.login-form a:hover {
+	text-decoration: underline;
+}
+
+.login-form .fa {
+	font-size: 21px;
+}
+
+.login-form .fa-paper-plane {
+	font-size: 17px;
+}
+
+.login-form .fa-check {
+	color: #fff;
+	left: 9px;
+	top: 18px;
+	font-size: 7px;
+	position: absolute;
+}
+</style>
+
+<body>
+<div>&nbsp;</div>
+<div>&nbsp;</div>
+<div>&nbsp;</div>
+	<div class="login-form">
+		<form (ngSubmit)="onLogin(f)" #f="ngForm">
+      <h2 class="text-center">Log in</h2>
+      <div>&nbsp;</div>
+			<div class="form-group">
+				<!--<div class="alert alert-danger"></div>-->
+			</div>
+						<div class="form-group">
+							<div class="input-group">
+								<span class="input-group-addon"><i class="fa fa-paper-plane"></i></span>
+									<input type="email" class="form-control" name="emp_email"
+                    placeholder="Email ID" required="required" ngModel required email #emp_email="ngModel" >
+                    <label *ngIf="emp_email.hasError('required') && !emp_email.pristine " class="alert alert-danger">emp email is
+                      required.</label>
+                    <label *ngIf="emp_email.hasError('email') && !emp_email.pristine " class="alert alert-danger">invalid email
+                      address</label>
+							</div>
+						</div>
+		 		  	<div class="form-group">
+						<div class="input-group">
+							<span class="input-group-addon"><i class="fa fa-lock"></i></span>
+								 <input type="password" class="form-control" name="emp_pass"
+                 placeholder="Password" id="myInput"
+                 ngModel required pass #emp_pass="ngModel">
+                  <label *ngIf="emp_pass.hasError('required') && !emp_pass.pristine " class="alert alert-danger">emp password is
+        required.</label>
+      <label *ngIf="emp_pass.hasError('emp_pass') && !emp_pass.pristine " class="alert alert-danger">invalid password
+        </label>
+							<span class="input-group-addon"><i class="fa fa-eye" onclick="myFunction()"></i></span>
+						</div>
+					</div>
+		 				<div class="form-group">
+				<!-- <label class="pull-left checkbox-inline">
+				 <input type="checkbox" name="remember" value="yes"> Remember me
+        </label> <br /> <br /> -->
+        	<label class="pull-left checkbox-inline">
+				 <input type="checkbox" ngModel name="tmc" #tmc="ngModel" required value="yes"> Terms and Conditions
+				</label> <br /> <br />
+        <label *ngIf="tmc.hasError('required') && !tmc.pristine " class="alert alert-danger">It is required!...
+        </label>
+        <a routerLink="/parent"><button type="submit" class="btn btn-danger btn-block">Submit</button></a>
+			</div>
+			<div class="clearfix">
+				<!-- <label class="pull-left checkbox-inline"> <input type="checkbox" name="remember" value="yes"> Remember me </label> -->
+				<a href="forgotPassword.jsp" class="pull-center">Forgot Password?</a>
+			</div>
+		</form>
+		<p class="text-center">
+			<a routerLink="/register" >Create an Account</a>
+    </p>
+    <div>&nbsp;</div>
+    <div>&nbsp;</div>
+    <div>&nbsp;</div>
+    <div>&nbsp;</div>
+    <div>&nbsp;</div>
+    <div>&nbsp;</div>
+  </div>
+
+</body>

@@ -1,0 +1,20 @@
+You can add global styles to this file, and also import other style files
+.container-class {
+  background-image: url("src/assets/images/logo_1.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-color: lightslategray;
+  border: 2px dashed #333;
+}
+.navbar
+{
+  background-size: width="300px";
+  background-size: hight="300px";
+  background-color: black;
+  background-position: center;
+
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

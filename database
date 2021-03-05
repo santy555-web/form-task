@@ -1,0 +1,135 @@
+DataBase for Form task 8 in Novodhi
+
+ //it will update the age on the basis od date changed by user
+	  
+	  create table basicform(
+	  id int AUTO_INCREMENT PRIMARY KEY,
+	  basicinfo_employee_number varchar(10) NOT NULL,
+      basicinfo_employee_title varchar(10),
+      basicinfo_employee_name varchar(100), 
+      basicinfo_employee_address varchar(200),
+      basicinfo_firstname varchar(100),
+      basicinfo_middlename varchar(100),
+      basicinfo_lastname varchar(100),
+      basicinfo_initial varchar(100),
+      basicinfo_gender varchar(100), 
+      basicinfo_dob date,
+      basicinfo_age int,
+      basicinfo_official_phone varchar(15),
+      basicinfo_mobile varchar(20),
+      basicinfo_fax varchar(20),
+      basicinfo_official_email varchar(100),
+      basicinfo_personal_email varchar(100),
+      basicinfo_personal2_email varchar(100),
+      basicinfo_personal3_email varchar(100),
+      basicinfo_file Blob,
+	personalDetails_birthplace varchar(100),
+    personalDetails_religion varchar(100),
+    personalDetails_caste varchar(100),
+    personalDetails_domicile varchar(100),
+    personalDetails_nationality varchar(100),
+    personalDetails_voterid varchar(50),
+    personalDetails_pan varchar(50),
+    personalDetails_aadhaar varchar(50),
+    personalDetails_marriage_status varchar(50),
+    personalDetails_no_children varchar(5),
+    personalDetails_marriage_date date,
+    personalDetails_spouse_name varchar(100),	  
+		bankDetails_bank_name varchar(100),
+    bankDetails_account_type varchar(100), 
+    bankDetails_account_number varchar(50),
+    bankDetails_peyment_type varchar(100),
+    bankDetails_branch_detail varchar(100),
+    bankDetails_ifsc varchar(100),
+    bankDetails_reimbursement_name varchar(100),
+    bankDetails_reimbursement_number varchar(100),
+	);
+
+
+
+
+		create table paddress(
+			pid int AUTO_INCREMENT PRIMARY KEY,
+			id int, 
+      addressDetails_address varchar(200),
+      addressDetails_city varchar(200),
+      addressDetails_state varchar(200),
+      addressDetails_country varchar(200),
+      addressDetails_district varchar(200),
+      addressDetails_zip int,
+      addressDetails_phone1 varchar(200),
+      addressDetails_phone2 varchar(200),
+      addressDetails_mobile_fax varchar(200),
+      addressDetails_personal_email varchar(200),
+      addressDetails_same_address varchar(10),
+			addressDetails_address1 varchar(200),
+      addressDetails_city1 varchar(200),
+      addressDetails_state1 varchar(200),
+      addressDetails_country1 varchar(200),
+      addressDetails_district1 varchar(200),
+      addressDetails_zip1 int,
+      addressDetails_phone11 varchar(200),
+      addressDetails_phone21 varchar(200),
+      addressDetails_mobile_fax1 varchar(200),
+      addressDetails_personal_email1 varchar(200),
+			foreign key(id) REFERENCES basicform(id)  
+		  );
+		  
+		  
+		   
+		
+		  
+		 
+		create table qualification(
+		id int,
+		qid int AUTO_INCREMENT PRIMARY KEY,
+		qualification_qualification varchar(200),
+    qualification_institute varchar(200),
+    qualification_passing_year varchar(200),
+    qualification_score varchar(200),
+    qualification_qualification_area varchar(200),
+		foreign key(id) REFERENCES basicform(id)
+		);
+
+
+ 
+     create table employment(
+		  id int,
+		  eid int AUTO_INCREMENT PRIMARY KEY,
+		  employment_fromDate date,
+		  employment_toDate date,
+		  employment_company varchar(200),
+		  employment_designation varchar(200),
+		  employment_relevant varchar(200),
+		  employment_nrelevant varchar(200),
+		  foreign key(id) REFERENCES basicform(id)
+		);
+	  
+	  
+	  
+	  create table skill(
+		skid int AUTO_INCREMENT PRIMARY KEY,
+		id int,
+		skill_category varchar(200),
+		skill varchar(200),
+		skill_level varchar(200),
+		iscurrent varchar(200),
+		experience varchar(200),
+		remarks varchar(200),
+		foreign key(id) REFERENCES basicform(id)
+	);
+	  
+	 
+		
+		
+			
+    
+
+
+
+
+ 
+ 
+ 
+ 
+ 
